@@ -1,0 +1,1 @@
+thin stop && thin -C config/thin.yml start
