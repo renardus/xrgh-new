@@ -17,6 +17,14 @@ gem 'simple_form'
 gem 'thin'
 gem 'high_voltage'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem "tabletastic"
+gem 'ancestry'
+gem 'paperclip'
+#gem 'axlsx'
+#gem 'acts_as_xlsx'
+#gem 'axlsx_rails'
+#gem 'sanitize' # https://github.com/rgrove/sanitize
+gem 'friendly_id' # https://github.com/norman/friendly_id
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_19, :mri_20, :rbx]
