@@ -2,6 +2,24 @@ h1. Xrgh New
 
 This application was generated for training purposes with the "rails_apps_composer":https://github.com/RailsApps/rails_apps_composer gem provided by the "RailsApps Project":http://railsapps.github.io/.
 
+h2. Training Purposes
+
+First objective is to see how a model of a tree can be represented in Rails. Therefore a Category model will be implemented with the gem ancestry to give it the tree attributes. The big challenge is to make a good view.
+
+Second objective is to give each category items. That is the normal has_many and belongs_to relationships.
+
+Third objective is to give a category features. That is the same as the items relationship but has a twist. The features of the ancestor categories are added to the feature list of a category. So probably a read-only _feature_list_ attribute must be added to the attributes of category.
+
+The fourth objective is to give an item properties. Which properties an item has is determined by the feature_list of its category. 
+
+The fifth objective is to find each property as a feature. So something like item.property[:color] should be possible.
+
+h2. Naming Conventions
+
+There are categories which form a forest. Each category has items. Each item has many properties. Which item properties there are is dependend on the category.
+
+The name of the category properties is still difficult because a property will have to refer to it and then the most natural denotation is type. But a category cannot have many types. Facet is a possibility. For now I have settled on _feature_.
+
 h2. Diagnostics
 
 This application was built with recipes that are known to work together.
